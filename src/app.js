@@ -1,7 +1,17 @@
 const express = require('express');
 const globalErrorHandler = require('./utils/globalErrorHandler');
+const applyMiddleware = require('./middlewares');
 const app = express();
 const port = process.env.PORT || 5000;
+const authRoutes = require('./routes/authentication')
+
+
+// applying all middlewares like cors, express json, cookie parser
+applyMiddleware(app);
+
+
+app.use(authRoutes);
+
 
 
 
