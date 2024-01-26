@@ -7,17 +7,11 @@ const authRoutes = require('./routes/authentication');
 const connectDB = require('./db/connectDB');
 const userRoutes = require('./routes/userInfo/userInfo')
 
-
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);
 
-
 app.use(authRoutes);
 app.use(userRoutes);
-
-
-
-
 
 
 
