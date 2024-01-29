@@ -1,12 +1,16 @@
-const createAccount = require('../../api/account/controllers/createAccount');
-const getUserAccounts = require('../../api/account/controllers/getUserAccounts');
+const {
+  findBankAccountOne,
+  createAccount,
+  updateAccount,
+  allAccountUser,
+  getUserAccounts,
+} = require("../../api/account/controllers");
+const router = require("express").Router();
 
-const router = require('express').Router();
+router.get("/findBankAccountOne", findBankAccountOne);
+router.get("/allAccountUser", allAccountUser);
+router.patch("/updateAccount/:id", updateAccount);
+router.post("/createBankAccount", createAccount);
+router.get("/userAccounts", getUserAccounts);
 
-
-router.post('/createBankAccount', createAccount);
-router.get('/userAccounts', getUserAccounts)
-// router.get
-// router.patch
-
-module.exports = router
+module.exports = router;
