@@ -1,14 +1,11 @@
 const { Schema, model } = require("mongoose");
 
 const AccountSchema = new Schema({
-  ac_name: {
+  holder_name: {
     type: String,
     required: true,
   },
-  no_name: {
-    type: String,
-  },
-  email: {
+  holderEmail: {
     type: String,
     required: true,
     unique: true,
@@ -21,29 +18,87 @@ const AccountSchema = new Schema({
       message: (props) => `${props.value} is not a valid email address!`,
     },
   },
-  ac_num: {
+  age: {
     type: String,
+    required: true,
+  },
+  gender: {
+    type: String,
+    required: true,
+  },
+  nationality: {
+    type: String,
+    required: true,
+  },
+  occupation: {
+    type: String,
+    required: true,
+  },
+
+  acc_num: {
+    type: Number,
     require: true,
     unique: true,
     default: function () {
       // Generate a random value using any desired method
-      return Math.random().toString(36).substring(2);
+      return Math.floor(1000000000 + Math.random() * 9000000000);
     },
   },
-  nid: {
+  holderDOB: {
+    type: Date,
+    required: true, // Make the field required
+    validate: {
+      validator: function (value) {
+        // Use your validation logic here
+        return value instanceof Date && !isNaN(value);
+      },
+      message: (props) => `${props.value} is not a valid date!`,
+    },
+  },
+  nidnumber: {
     type: Number,
     required: true,
-    unique: true,
     max: 9999999999,
     min: 1000000000,
   },
-  number: {
+  phnNumber: {
     type: Number,
     required: true,
-    unique: true,
   },
+  address: {
+    type: String,
+    required: true,
+  },
+  type: {
+    type: String,
+    required: true,
+  },
+  income_source: {
+    type: String,
+    required: true,
+  },
+  initial_deposit: {
+    type: Number,
+    required: true,
+  },
+  reference: {
+    type: String,
+    required: true,
+  },
+  nominee: {
+    type: String,
+    required: true,
+  },
+  documents: {
+    type: [String],
+    required: true
+  },
+  profileImg: {
+    type: String,
+    required: true
+  }
 });
 
-const Account = model('Account', AccountSchema);
+const Account = model("Account", AccountSchema);
 
 module.exports = Account;
