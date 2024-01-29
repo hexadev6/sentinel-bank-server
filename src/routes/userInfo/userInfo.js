@@ -4,4 +4,7 @@ const router = require('express').Router();
 
 router.post('/createUser', createUser);
 
+// router.get
+// router.patch
+
 module.exports = router;
