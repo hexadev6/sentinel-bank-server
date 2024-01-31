@@ -91,12 +91,16 @@ const AccountSchema = new Schema({
   },
   documents: {
     type: [String],
-    required: true
+    required: true,
   },
   profileImg: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
+  createdAT: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 const Account = model("Account", AccountSchema);

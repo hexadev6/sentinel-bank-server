@@ -1,13 +1,13 @@
 const createAccount = require("./createAccount");
 const findBankAccountOne = require("./findBankAccountOne");
 const updateAccount = require("./updateAccount");
-const allAccountUser = require("./allAccountUser");
+const allAccount = require("./allAccount");
 const getUserAccounts = require("./getUserAccounts");
 
 module.exports = {
   createAccount,
   findBankAccountOne,
   updateAccount,
-  allAccountUser,
+  allAccount,
   getUserAccounts,
 };
