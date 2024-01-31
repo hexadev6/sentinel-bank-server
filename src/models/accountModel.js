@@ -8,7 +8,6 @@ const AccountSchema = new Schema({
   holderEmail: {
     type: String,
     required: true,
-    unique: true,
     lowercase: true,
     validate: {
       validator: function (value) {
