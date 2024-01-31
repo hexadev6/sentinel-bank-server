@@ -1,18 +1,16 @@
 const { Schema, model } = require("mongoose");
 
 const AccountSchema = new Schema({
-  holder_name: {
+  holderName: {
     type: String,
     required: true,
   },
   holderEmail: {
     type: String,
     required: true,
-    unique: true,
     lowercase: true,
     validate: {
       validator: function (value) {
-        // Regular expression for email validation
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
       },
       message: (props) => `${props.value} is not a valid email address!`,
@@ -58,8 +56,8 @@ const AccountSchema = new Schema({
   nidnumber: {
     type: Number,
     required: true,
-    max: 9999999999,
-    min: 1000000000,
+    // max: 9999999999,
+    // min: 1000000000,
   },
   phnNumber: {
     type: Number,
