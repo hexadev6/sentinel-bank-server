@@ -11,6 +11,11 @@ const UserSchema = new Schema({
         required: true,
         unique: true
     },
+    'status': {
+        type: String,
+        required: true,
+        default: 'user',
+    },
     'image':{
         type: String,
         required: true,
