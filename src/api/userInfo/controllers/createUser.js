@@ -8,7 +8,7 @@ const createUser = async (req, res, next) => {
             name, email, image
         })
         const result = await newUser.save();
-        res.send(result)
+        res.send({success: true, result})
     } catch (error) {
         next(error);
     }
