@@ -8,7 +8,7 @@ const {
 const getAllAccounts = require("../../api/account/controllers/getAllAccounts");
 const router = require("express").Router();
 
-router.get("/findBankAccountOne", findBankAccountOne);
+router.get("/findBankAccountOne/:id", findBankAccountOne);
 router.get("/allAccountUser", allAccountUser);
 router.patch("/updateAccount/:id", updateAccount);
 router.post("/createBankAccount", createAccount);
