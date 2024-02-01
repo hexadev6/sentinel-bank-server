@@ -8,7 +8,7 @@ const updateAccount = async (req, res) => {
 
     return res
       .status(200)
-      .json({ message: "Account update successfully", data: result });
+      .send({ success: true, data: result });
   } catch (error) {
     return res.status(500).json({ message: "Internal Server Error" });
   }

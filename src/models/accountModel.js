@@ -33,15 +33,15 @@ const AccountSchema = new Schema({
     required: true,
   },
 
-  // acc_num: {
-  //   type: Number,
-  //   require: true,
-  //   unique: true,
-  //   default: function () {
-  //     // Generate a random value using any desired method
-  //     return Math.floor(1000000000 + Math.random() * 9000000000);
-  //   },
-  // },
+  acc_num: {
+    type: Number,
+    require: true,
+    unique: true,
+    default: function () {
+      // Generate a random value using any desired method
+      return Math.floor(1000000000 + Math.random() * 9000000000);
+    },
+  },
   holderDOB: {
     type: Date,
     required: true, // Make the field required
