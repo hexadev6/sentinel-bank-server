@@ -8,7 +8,8 @@ const connectDB = require('./db/connectDB');
 const userRoutes = require('./routes/userInfo/userInfo')
 const accountRoutes = require('./routes/account');
 const paymentRoutes = require('./routes/payment');
-const allTransactions = require('./routes/transactions');
+const transactionsRoutes = require('./routes/transactions');
+const allDeposits = require('./routes/transactions');
 
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);
@@ -17,7 +18,8 @@ app.use(authRoutes);
 app.use(userRoutes);
 app.use(accountRoutes);
 app.use(paymentRoutes);
-app.use(allTransactions);
+app.use(transactionsRoutes);
+// app.use(allDeposits);
 
 
 // default route

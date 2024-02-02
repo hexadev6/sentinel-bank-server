@@ -3,9 +3,9 @@ const User = require("../../../models/User");
 
 const createUser = async (req, res, next) => {
     try {
-        const {name, email, image} = req.body;
+        const {name, email, image, nidnum} = req.body;
         const newUser = new User({
-            name, email, image
+            name, email, image,nidnum
         })
         const result = await newUser.save();
         res.send({success: true, result})

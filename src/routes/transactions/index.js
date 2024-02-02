@@ -1,5 +1,7 @@
 const router = require("express").Router();
-const allTransactions = require('../../api/account/controllers/allTransactions')
+const allDeposits = require('../../api/account/controllers/depoHistory')
+const getAllDeposit = require('../../api/account/controllers/getDepoHistory')
 
-router.post('/transactions', allTransactions );
+router.post('/deposit', allDeposits );
+router.get('/getDeposit/:accNum', getAllDeposit );
 module.exports = router;
