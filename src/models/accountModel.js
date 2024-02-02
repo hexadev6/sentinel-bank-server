@@ -56,8 +56,8 @@ const AccountSchema = new Schema({
   nidnumber: {
     type: Number,
     required: true,
-    // max: 9999999999,
-    // min: 1000000000,
+    max: 9999999999,
+    min: 1000000000,
   },
   phnNumber: {
     type: Number,
@@ -95,9 +95,10 @@ const AccountSchema = new Schema({
     type: String,
     required: true,
   },
-  createdAT: {
-    type: Date,
-    default: Date.now,
+  status: {
+    type: String,
+    default: "not-active",
+    required: true,
   },
 });
 

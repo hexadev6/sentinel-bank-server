@@ -7,6 +7,9 @@ const authRoutes = require('./routes/authentication');
 const connectDB = require('./db/connectDB');
 const userRoutes = require('./routes/userInfo/userInfo')
 const accountRoutes = require('./routes/account');
+const paymentRoutes = require('./routes/payment');
+const transactionsRoutes = require('./routes/transactions');
+const allDeposits = require('./routes/transactions');
 
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);
@@ -14,7 +17,9 @@ applyMiddleware(app);
 app.use(authRoutes);
 app.use(userRoutes);
 app.use(accountRoutes);
-
+app.use(paymentRoutes);
+app.use(transactionsRoutes);
+// app.use(allDeposits);
 
 
 // default route
@@ -22,9 +27,10 @@ app.get('/', async (req, res) => {
     try {
         res.status(200).send('SENTINEL TRUST BANK SERVER IS ONLINE......')
     } catch (error) {
-        res.status(500).send({message: error.message})
+        res.status(500).send({ message: error.message })
     }
 })
+
 
 
 // handle all unhandled routes
