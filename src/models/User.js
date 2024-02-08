@@ -22,6 +22,18 @@ const UserSchema = new Schema({
     },
     'acc_num':{
         type: Number,   
+    },
+    'location':{
+        type: String,
+    },
+    'nationality':{
+        type: String,
+    },
+    'DOB':{
+        type: String,
+    },
+    'mobile':{
+         type: String
     }
 })
 
