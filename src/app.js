@@ -10,6 +10,10 @@ const accountRoutes = require('./routes/account');
 const paymentRoutes = require('./routes/payment');
 const transactionsRoutes = require('./routes/transactions');
 const allDeposits = require('./routes/transactions');
+const SSLCommerzPayment = require('sslcommerz-lts')
+const store_id = '<your_store_id>'
+const store_passwd = '<your_store_password>'
+const is_live = false
 
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);

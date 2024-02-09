@@ -2,10 +2,15 @@ const Deposits = require('../../../models/DepositHistoryModel')
 
 const allDeposits = async (req, res) => {
     try {
-        const depoData = new Deposits(req.body)
-        const result = await depoData.save()
-        // console.log(result)
-        res.send(result)
+        const id = req.params.id
+        const result = await Deposits.findByIdAndUpdate(
+            id,
+            { $set: { paymentStatus: true } },
+        );
+
+        console.log(result)
+
+        res.redirect('http://localhost:5173/dashboard/quickBanking');
     }
     catch (error) {
         console.log(error)
@@ -14,4 +19,4 @@ const allDeposits = async (req, res) => {
 }
 
 
-module.exports= allDeposits
+module.exports = allDeposits
