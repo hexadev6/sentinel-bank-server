@@ -9,6 +9,7 @@ const applyMiddleware = (app) => {
       origin: [LOCAL_CLIENT, CLIENT],
       methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
       credentials: true,
+      optionSuccessStatus: 200,
     })
   );
   app.use(express.json());
