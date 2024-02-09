@@ -1,6 +1,6 @@
 const Account = require("../../../models/accountModel");
 
-const allAccountUser = async (req, res) => {
+const allAccount = async (req, res) => {
   try {
     const email = req.query.email;
     const result = await Account.find({ holderEmail: email });
@@ -11,4 +11,4 @@ const allAccountUser = async (req, res) => {
   }
 };
 
-module.exports = allAccountUser;
+module.exports = allAccount;

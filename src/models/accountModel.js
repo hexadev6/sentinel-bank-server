@@ -89,17 +89,17 @@ const AccountSchema = new Schema({
   },
   documents: {
     type: [String],
-    required: true
+    required: true,
   },
   profileImg: {
     type: String,
-    required: true
+    required: true,
   },
   status: {
     type: String,
-    default: 'not-active',
-    required: true
-  }
+    default: "not-active",
+    required: true,
+  },
 });
 
 const Account = model("Account", AccountSchema);
