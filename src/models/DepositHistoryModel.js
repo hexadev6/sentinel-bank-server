@@ -24,14 +24,21 @@ const DepositHistoryModel = new Schema({
         type: Number,
         required: true
     },
-    depsitBy: {
-        type: String,
-        required: true
+    paymentStatus:{
+        type:Boolean,
+        default:false
     },
-    depsitId: {
-        type: String,
-        required: true
+    transactionId:{
+        type:String
     },
+    // depsitBy: {
+    //     type: String,
+    //     required: true
+    // },
+    // depsitId: {
+    //     type: String,
+    //     required: true
+    // },
     transactionDate: {
         type: String,
         required: true
