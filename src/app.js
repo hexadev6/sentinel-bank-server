@@ -11,6 +11,7 @@ const paymentRoutes = require("./routes/payment");
 const transactionsRoutes = require("./routes/transactions");
 const applicationCardRoutes = require("./routes/applicationCard");
 const allDeposits = require("./routes/transactions");
+const reviewRoutes = require("./routes/review");
 
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);
@@ -21,7 +22,7 @@ app.use(accountRoutes);
 app.use(paymentRoutes);
 app.use(transactionsRoutes);
 app.use(applicationCardRoutes);
-// app.use(allDeposits);
+app.use(reviewRoutes);
 
 // default route
 app.get("/", async (req, res) => {
