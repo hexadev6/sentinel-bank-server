@@ -1,6 +1,6 @@
 const Reviews = require("../../models/reviewModel")
 
-const insertReview = async (req, res) => {
+const getReview = async (req, res) => {
     try {
         const result = await Reviews.find().sort({ _id: -1 })
         return res.send(result)
@@ -12,4 +12,4 @@ const insertReview = async (req, res) => {
     }
 }
 
-module.exports = insertReview
+module.exports = getReview
