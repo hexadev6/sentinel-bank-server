@@ -5,6 +5,7 @@ const updateUser = async (req, res) => {
     const result = await User.findByIdAndUpdate(req?.params?.id, req.body, {
       new: true,
     });
+   
 
     return res.status(200).json({ message: "success", data: result });
   } catch (error) {

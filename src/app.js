@@ -10,6 +10,7 @@ const accountRoutes = require('./routes/account');
 const paymentRoutes = require('./routes/payment');
 const transactionsRoutes = require('./routes/transactions');
 const allDeposits = require('./routes/transactions');
+const chat = require('../src/api/chat')
 
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);
@@ -19,6 +20,7 @@ app.use(userRoutes);
 app.use(accountRoutes);
 app.use(paymentRoutes);
 app.use(transactionsRoutes);
+app.use(chat)
 // app.use(allDeposits);
 
 
