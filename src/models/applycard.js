@@ -54,6 +54,31 @@ const applicationCard = new Schema({
   zipCode: {
     type: String,
   },
+  cardNumber: {
+    type: Number,
+    require: true,
+    unique: true,
+    default: function () {
+      // Generate a random value using any desired method
+      return Math.floor(1000000000000000 + Math.random() * 9000000000000000);
+    },
+  },
+  expirationDate: {
+    type: Date,
+    default: function () {
+      // Set default expiration date to one year from now
+      const now = new Date();
+      return new Date(now.getFullYear() + 1, now.getMonth(), now.getDate());
+    },
+  },
+  cvv: {
+    type: String,
+    required: true,
+    default: function () {
+      // Generate a random 3-digit CVV
+      return Math.floor(100 + Math.random() * 900).toString();
+    },
+  },
 
   status: {
     type: String,
