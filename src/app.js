@@ -1,7 +1,14 @@
 const express = require("express");
 const globalErrorHandler = require("./utils/globalErrorHandler");
+// start chat
+const chatServer = require('./api/chatapp/liveChat/chatServer')
+//end  chat
 const applyMiddleware = require("./middlewares");
 const app = express();
+// start chat
+const http = require('http');
+const server = http.createServer(app);
+// end chat
 const port = process.env.PORT || 5000;
 const authRoutes = require("./routes/authentication");
 const connectDB = require("./db/connectDB");
@@ -10,7 +17,7 @@ const accountRoutes = require("./routes/account");
 const paymentRoutes = require("./routes/payment");
 const transactionsRoutes = require("./routes/transactions");
 const applicationCardRoutes = require("./routes/applicationCard");
-const allDeposits = require("./routes/transactions");
+// const allDeposits = require("./routes/transactions");
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
 
@@ -45,9 +52,13 @@ app.all("*", async (req, res, next) => {
 // error handling middleware
 app.use(globalErrorHandler);
 
+// Set up the chat server
+chatServer(server);
+
+
 const main = async () => {
   await connectDB();
-  app.listen(port, () => {
+  server.listen(port, () => {
     console.log(`server is listening to ${port}`);
   });
 };
