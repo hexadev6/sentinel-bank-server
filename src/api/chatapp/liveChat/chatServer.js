@@ -13,25 +13,8 @@ const chatServer=(server)=>{
     },
   });
   
-    
-  // io.on('connection', (socket) => {
-  //   console.log('A user connected');
-  
-  //   socket.on('sendMessage', async (message) => {
-  //     // Save message to MongoDB
-  //     await ChatModel.create(message);
-  
-  //     // Emit the received message to all connected clients
-  //     io.emit('receiveMessage', message);
-  //   });
-  
-  //   socket.on('disconnect', () => {
-  //     console.log('User disconnected');
-  //   });
-  // });
-  
   io.on('connection', (socket) => {
-    console.log('A user connected');
+    // console.log('A user connected');
   
     socket.on('joinRoom', (userId) => {
       socket.join(userId);
@@ -46,7 +29,7 @@ const chatServer=(server)=>{
     });
   
     socket.on('disconnect', () => {
-      console.log('User disconnected');
+      // console.log('User disconnected');
     });
   });
 
