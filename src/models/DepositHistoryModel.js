@@ -31,14 +31,6 @@ const DepositHistoryModel = new Schema({
     transactionId:{
         type:String
     },
-    // depsitBy: {
-    //     type: String,
-    //     required: true
-    // },
-    // depsitId: {
-    //     type: String,
-    //     required: true
-    // },
     transactionDate: {
         type: String,
         required: true

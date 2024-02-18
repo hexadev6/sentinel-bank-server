@@ -18,7 +18,6 @@ const UserSchema = new Schema({
     },
     'image':{
         type: String,
-        required: true,
     },
     'acc_num':{
         type: Number,   
