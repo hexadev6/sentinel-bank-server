@@ -8,7 +8,7 @@ const allDeposits = async (req, res) => {
             { $set: { paymentStatus: true } },
         );
 
-        console.log(result)
+        // console.log(result)
 
         res.redirect('http://localhost:5173/dashboard/quickBanking');
     }

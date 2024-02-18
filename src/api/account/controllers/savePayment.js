@@ -49,7 +49,7 @@ const savePayment = async (req, res) => {
                 ...paymentInfo.toObject(), transactionId: transId
              })
             const result = await finalPayment.save()
-            console.log(result)
+            // console.log(result)
             res.send({ url: GatewayPageURL })
         });
     }
