@@ -21,6 +21,7 @@ const applicationCardRoutes = require("./routes/applicationCard");
 // const allDeposits = require("./routes/transactions");
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
+const loanRouter = require("./routes/loan");
 // const chatSocket = require("../src/Sockets/chatSocket");
 
 app.use(cors());
@@ -35,6 +36,7 @@ app.use(transactionsRoutes);
 app.use(applicationCardRoutes);
 app.use(reviewRoutes);
 app.use(noticeRoutes);
+app.use(loanRouter);
 // app.use(chatSocket);
 
 // default route
