@@ -19,6 +19,7 @@ const paymentRoutes = require("./routes/payment");
 const transactionsRoutes = require("./routes/transactions");
 const applicationCardRoutes = require("./routes/applicationCard");
 // const allDeposits = require("./routes/transactions");
+
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
 const loanRouter = require("./routes/loan");
