@@ -2,6 +2,7 @@ const socketIo = require("socket.io");
 const ChatModel = require("../../../models/chatModel");
 const { LOCAL_CLIENT, CLIENT } = require("../../../config/default.js");
 
+
 const chatServer = (server) => {
   const io = socketIo(server, {
     cors: {
@@ -12,11 +13,11 @@ const chatServer = (server) => {
     },
   });
 
-
   io.on("connection", (socket) => {
     socket.on("joinRoom", (userId) => {
       socket.join(userId);
     });
+
 
     socket.on("sendMessage", async (message) => {
       await ChatModel.create(message);
@@ -29,4 +30,7 @@ const chatServer = (server) => {
   });
 };
 
+
 module.exports = chatServer;
+
+
