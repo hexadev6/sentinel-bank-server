@@ -3,7 +3,7 @@ const Withdraw = require('../../../models/WithdrawHistoryModal');
 
 const transactionSummary = async (req, res) => {
     const accNum = parseInt(req.params?.accNum);
-    console.log(accNum);
+    // console.log(accNum);
 
     try {
         const summary = await Deposit.aggregate([

@@ -12,7 +12,7 @@ const getCardApply=async(req,res)=>{
       ])
 
         res.send(CardApply)
-        console.log(CardApply);
+        // console.log(CardApply);
     }
     catch (error) {
         console.error(error);

@@ -21,6 +21,7 @@ const applicationCardRoutes = require("./routes/applicationCard");
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
 const chatRoutes = require("./routes/chat");
+const loanRoutes = require("./routes/loan");
 
 app.use(cors());
 // applying all middlewares like cors, express json, cookie parser
@@ -36,6 +37,7 @@ app.use(applicationCardRoutes);
 app.use(reviewRoutes);
 app.use(noticeRoutes);
 app.use(chatRoutes);
+app.use(loanRoutes);
 
 
 

@@ -12,7 +12,7 @@ const userEngagement = async (req, res) => {
     }
 
     res.json(obj)
-    console.log(totalUser,{accountCount});
+    // console.log(totalUser,{accountCount});
   } catch (error) {
     console.error(error);
     res.status(500).send('Internal Server Error');
