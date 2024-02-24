@@ -7,30 +7,17 @@ const userEngagement= async(req,res)=>{
 
         const countUsersWithAccount = await User.countDocuments({ acc_num: { $exists: true } });
         
-     const totalUsers = await User.countDocuments();
+     const totalUsers = await User.estimatedDocumentCount()
 
-        //     {
-        //         $match: {
-        //             acc_Num: accNum, 
-        //         }
-        //     },
-        //     {
-        //         $group: {
-        //             _id: {Acc_num: '$acc_num'
-                       
-        //             },
-        //             count: { $sum: 1 }
-        //         }
-        //     }
-        
-        // const totalUser= await User.aggregate([
-        //     {
+     const obj={
+        countUsersWithAccount,
+        totalUsers
+     }
+     res.json(obj)
+     console.log(obj);
 
-        //     }
-        // ])
-        const withOutAcc = Math.max(0, totalUsers - countUsersWithAccount);
-        res.send({ countUsersWithAccount },totalUsers,withOutAcc);
-        console.log({countUsersWithAccount},totalUsers,withOutAcc);
+
+       
     }
     catch (error) {
         console.error(error);
