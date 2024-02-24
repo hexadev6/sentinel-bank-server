@@ -80,7 +80,7 @@ const LoanSchema = new Schema({
 
   status: {
     type: String,
-    default: "not-active",
+    default: "Pending",
   },
   loanCompRang: {
     type: Number,
