@@ -18,16 +18,15 @@ const accountRoutes = require("./routes/account");
 const paymentRoutes = require("./routes/payment");
 const transactionsRoutes = require("./routes/transactions");
 const applicationCardRoutes = require("./routes/applicationCard");
-// const allDeposits = require("./routes/transactions");
-
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
-const loanRouter = require("./routes/loan");
-// const chatSocket = require("../src/Sockets/chatSocket");
+const chatRoutes = require("./routes/chat");
+
 
 app.use(cors());
 // applying all middlewares like cors, express json, cookie parser
 applyMiddleware(app);
+
 
 app.use(authRoutes);
 app.use(userRoutes);
@@ -37,8 +36,10 @@ app.use(transactionsRoutes);
 app.use(applicationCardRoutes);
 app.use(reviewRoutes);
 app.use(noticeRoutes);
-app.use(loanRouter);
-// app.use(chatSocket);
+app.use(chatRoutes);
+
+
+
 
 // default route
 app.get("/", async (req, res) => {
@@ -49,6 +50,7 @@ app.get("/", async (req, res) => {
   }
 });
 
+
 // handle all unhandled routes
 app.all("*", async (req, res, next) => {
   const error = new Error(`Can't find ${req.originalUrl} on the server`);
@@ -56,11 +58,14 @@ app.all("*", async (req, res, next) => {
   next(error);
 });
 
+
 // error handling middleware
 app.use(globalErrorHandler);
 
+
 // Set up the chat server
 chatServer(server);
+
 
 const main = async () => {
   await connectDB();
@@ -68,5 +73,6 @@ const main = async () => {
     console.log(`server is listening to ${port}`);
   });
 };
+
 
 main();
