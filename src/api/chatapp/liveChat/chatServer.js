@@ -13,9 +13,6 @@ const chatServer = (server) => {
     },
   });
 
-
-
-
   io.on("connection", (socket) => {
     socket.on("joinRoom", (userId) => {
       socket.join(userId);
@@ -24,7 +21,6 @@ const chatServer = (server) => {
 
     socket.on("sendMessage", async (message) => {
       await ChatModel.create(message);
-
 
       io.to(message.receiver).emit("receiveMessage", message);
     });

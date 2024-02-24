@@ -1,6 +1,5 @@
 const { Schema, model } = require('mongoose');
 
-
 const chatSchema = new Schema({
     sender: { type: String },
     senderImage: { type: String },
@@ -13,6 +12,5 @@ const chatSchema = new Schema({
 
 
 const ChatModel = model('Chat', chatSchema);
-
 
 module.exports = ChatModel;

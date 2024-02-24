@@ -6,5 +6,3 @@ router.get("/allChat/:id", getChatById);
 
 
 module.exports = router;
-
-
