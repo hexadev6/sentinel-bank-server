@@ -7,26 +7,11 @@ const chatServer = (server) => {
     cors: {
       origin: [LOCAL_CLIENT, CLIENT],
       methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
-      credentials: true,
+      // credentials: true,
       optionSuccessStatus: 200,
     },
   });
 
-  // io.on('connection', (socket) => {
-  //   console.log('A user connected');
-
-  //   socket.on('sendMessage', async (message) => {
-  //     // Save message to MongoDB
-  //     await ChatModel.create(message);
-
-  //     // Emit the received message to all connected clients
-  //     io.emit('receiveMessage', message);
-  //   });
-
-  //   socket.on('disconnect', () => {
-  //     console.log('User disconnected');
-  //   });
-  // });
 
   io.on("connection", (socket) => {
     socket.on("joinRoom", (userId) => {
@@ -34,14 +19,13 @@ const chatServer = (server) => {
     });
 
     socket.on("sendMessage", async (message) => {
-      // Save message to MongoDB
       await ChatModel.create(message);
 
-      // Emit the received message to the specific room
       io.to(message.receiver).emit("receiveMessage", message);
     });
 
-    socket.on("disconnect", () => {});
+
+    socket.on("disconnect", () => { });
   });
 };
 

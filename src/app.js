@@ -18,10 +18,9 @@ const accountRoutes = require("./routes/account");
 const paymentRoutes = require("./routes/payment");
 const transactionsRoutes = require("./routes/transactions");
 const applicationCardRoutes = require("./routes/applicationCard");
-// const allDeposits = require("./routes/transactions");
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
-// const chatSocket = require("../src/Sockets/chatSocket");
+const chatRoutes = require("./routes/chat");
 
 app.use(cors());
 // applying all middlewares like cors, express json, cookie parser
@@ -35,7 +34,8 @@ app.use(transactionsRoutes);
 app.use(applicationCardRoutes);
 app.use(reviewRoutes);
 app.use(noticeRoutes);
-// app.use(chatSocket);
+app.use(chatRoutes);
+
 
 // default route
 app.get("/", async (req, res) => {
