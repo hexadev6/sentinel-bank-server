@@ -1,40 +1,22 @@
-const Account= require("../../../models/accountModel")
-const User= require("../../../models/User")
+const Account = require("../../../models/accountModel");
+const User = require("../../../models/User");
 
-const userEngagement= async(req,res)=>{
-
-    try{
-
-        const countUsersWithAccount = await User.countDocuments({ acc_num: { $exists: true } });
-        
-     const totalUsers = await User.countDocuments();
-
-        //     {
-        //         $match: {
-        //             acc_Num: accNum, 
-        //         }
-        //     },
-        //     {
-        //         $group: {
-        //             _id: {Acc_num: '$acc_num'
-                       
-        //             },
-        //             count: { $sum: 1 }
-        //         }
-        //     }
-        
-        // const totalUser= await User.aggregate([
-        //     {
-
-        //     }
-        // ])
-        const withOutAcc = Math.max(0, totalUsers - countUsersWithAccount);
-        res.send({ countUsersWithAccount },totalUsers,withOutAcc);
-        console.log({countUsersWithAccount},totalUsers,withOutAcc);
+const userEngagement = async (req, res) => {
+    const email= req.params.email
+  try {
+    const totalUser = await User.estimatedDocumentCount();
+    const accountCount = await Account.countDocuments({ email });
+    const obj={
+        totalUser,
+        accountCount
     }
-    catch (error) {
-        console.error(error);
-        res.status(500).send('Internal Server Error');
-    }
-}
+
+    res.json(obj)
+    console.log(totalUser,{accountCount});
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('Internal Server Error');
+  }
+};
+
 module.exports = userEngagement;
