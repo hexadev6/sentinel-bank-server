@@ -1,4 +1,5 @@
 const applycard= require('../../../models/applycard')
+const Loan = require('../../../models/loanModel')
 
 const getCardApply=async(req,res)=>{
      try{
@@ -10,9 +11,14 @@ const getCardApply=async(req,res)=>{
             }
         }
       ])
+      const loan= await Loan.estimatedDocumentCount()
 
-        res.send(CardApply)
-        // console.log(CardApply);
+      const total={
+        CardApply, loan
+      }
+
+        res.json(total)
+        console.log(total);
     }
     catch (error) {
         console.error(error);

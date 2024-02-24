@@ -1,5 +1,4 @@
 const Deposit = require('../../../models/DepositHistoryModel');
-const Withdraw = require('../../../models/WithdrawHistoryModal');
 
 const transactionSummary = async (req, res) => {
     const accNum = parseInt(req.params?.accNum);
