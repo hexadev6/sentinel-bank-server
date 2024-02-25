@@ -23,6 +23,7 @@ const noticeRoutes = require("./routes/notice");
 const chatRoutes = require("./routes/chat");
 const StatisticsRoute = require("./routes/Statistics");
 const LoanRoute = require("./routes/loan");
+const notificationRoute = require("./routes/notification");
 
 app.use(cors());
 // applying all middlewares like cors, express json, cookie parser
@@ -39,6 +40,7 @@ app.use(noticeRoutes);
 app.use(chatRoutes);
 app.use(StatisticsRoute);
 app.use(LoanRoute);
+app.use(notificationRoute);
 
 // default route
 app.get("/", async (req, res) => {
