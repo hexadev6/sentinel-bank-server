@@ -9,10 +9,10 @@ const allDeposits = async (req, res) => {
 
     // console.log(result)
 
-    // res.redirect("http://localhost:5173/dashboard/quickBanking");
-    res.redirect(
-      "https://ornate-kulfi-347059.netlify.app/dashboard/quickBanking"
-    );
+    res.redirect("http://localhost:5173/dashboard/quickBanking");
+    // res.redirect(
+    //   "https://ornate-kulfi-347059.netlify.app/dashboard/quickBanking"
+    // );
   } catch (error) {
     console.log(error);
     res.send(error);
