@@ -10,7 +10,7 @@ const authCookieToken = async (req, res, next) => {
         secure: process.env.NODE_ENV === "production",
         sameSite: process.env.NODE_ENV === "production" ? "none" : "strict",
       })
-      .send({ success: true });
+      .send({ success: "success" });
   } catch (error) {
     next(error);
   }

@@ -2,9 +2,7 @@ require("dotenv").config();
 
 const config = {
   LOCAL_CLIENT: process.env.LOCAL_CLIENT,
-  CLIENT: process.env.CLIENT,
-  credentials: true,
-  optionSuccessStatus: 200,
+  CLIENT: process.env.PROD_CLIENT,
 };
 
 module.exports = Object.freeze(config);
