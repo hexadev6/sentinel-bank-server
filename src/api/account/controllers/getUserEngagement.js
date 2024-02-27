@@ -14,7 +14,7 @@ const userEngagement= async(req,res)=>{
         totalUsers
      }
      res.json(obj)
-     console.log(obj);
+    //  console.log(obj);
 
 
        
