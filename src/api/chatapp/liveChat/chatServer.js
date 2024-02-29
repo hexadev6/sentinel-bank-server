@@ -1,4 +1,5 @@
 const socketIo = require("socket.io");
+
 const ChatModel = require("../../../models/chatModel");
 const { LOCAL_CLIENT, PROD_CLIENT } = require("../../../config/default.js");
 
@@ -13,6 +14,7 @@ const chatServer = (server) => {
   });
 
   io.on("connection", (socket) => {
+    console.log("user connected");
     socket.on("joinRoom", (userId) => {
       socket.join(userId);
     });
@@ -23,7 +25,9 @@ const chatServer = (server) => {
       io.to(message.receiver).emit("receiveMessage", message);
     });
 
-    socket.on("disconnect", () => {});
+    socket.on("disconnect", () => {
+      console.log("user disconnected");
+    });
   });
 };
 

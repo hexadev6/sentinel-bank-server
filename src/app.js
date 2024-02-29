@@ -7,9 +7,7 @@ const port = process.env.PORT || 5000;
 // start chat
 const chatServer = require("./api/chatapp/liveChat/chatServer");
 const http = require("http");
-
 const server = http.createServer(app);
-
 // end chat
 const connectDB = require("./db/connectDB");
 const authRoutes = require("./routes/authentication");
@@ -30,7 +28,7 @@ app.use(cors());
 
 applyMiddleware(app);
 // Set up the chat server
-chatServer(server);
+
 app.use(authRoutes);
 app.use(userRoutes);
 app.use(accountRoutes);
@@ -62,6 +60,8 @@ app.all("*", async (req, res, next) => {
 
 // error handling middleware
 app.use(globalErrorHandler);
+
+chatServer(server);
 
 const main = async () => {
   await connectDB();
