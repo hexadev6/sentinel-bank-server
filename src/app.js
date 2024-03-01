@@ -1,16 +1,14 @@
 const express = require("express");
 const cors = require("cors");
 const globalErrorHandler = require("./utils/globalErrorHandler");
-// start chat
-const chatServer = require("./api/chatapp/liveChat/chatServer");
-//end  chat
 const applyMiddleware = require("./middlewares");
 const app = express();
+const port = process.env.PORT || 5000;
 // start chat
+const chatServer = require("./api/chatapp/liveChat/chatServer");
 const http = require("http");
 const server = http.createServer(app);
 // end chat
-const port = process.env.PORT || 5000;
 const connectDB = require("./db/connectDB");
 const authRoutes = require("./routes/authentication");
 const userRoutes = require("./routes/userInfo/userInfo");
@@ -20,14 +18,16 @@ const transactionsRoutes = require("./routes/transactions");
 const applicationCardRoutes = require("./routes/applicationCard");
 const reviewRoutes = require("./routes/review");
 const noticeRoutes = require("./routes/notice");
-const chatRoutes = require("./routes/chat");
+const chatRoutes = require("./routes/Chat/index");
 const StatisticsRoute = require("./routes/Statistics");
 const LoanRoute = require("./routes/loan");
 const notificationRoute = require("./routes/notification");
 
 app.use(cors());
 // applying all middlewares like cors, express json, cookie parser
+
 applyMiddleware(app);
+// Set up the chat server
 
 app.use(authRoutes);
 app.use(userRoutes);
@@ -61,7 +61,6 @@ app.all("*", async (req, res, next) => {
 // error handling middleware
 app.use(globalErrorHandler);
 
-// Set up the chat server
 chatServer(server);
 
 const main = async () => {
