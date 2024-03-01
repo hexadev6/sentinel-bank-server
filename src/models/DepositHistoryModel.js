@@ -5,6 +5,10 @@ const DepositHistoryModel = new Schema({
         type: Number,
         required: true
     },                     
+    userName: {
+        type: String,
+        required: true
+    },                     
     userEmail: {
         type: String,
         required: true,
