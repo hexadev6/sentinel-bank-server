@@ -6,16 +6,20 @@ const store_id = process.env.STORE_ID
 const store_passwd = process.env.STORE_PASS
 const is_live = false
 
+// console.log(store_id, store_passwd)
 
 const savePayment = async (req, res) => {
+    // console.log('Inside allDeposits route');
     try {
         const paymentInfo = new Deposits(req.body);
+        // console.log('from backend==> ',paymentInfo)
+
         const transId = paymentInfo._id.toString()
         const data = {
             total_amount: paymentInfo.amount,
             currency: 'BDT',
             tran_id: transId, // use unique tran_id for each api call
-            success_url: `https://sentinel-bank-server-six.vercel.app/deposit/${transId}`,
+            success_url: `http://localhost:5000/deposit/${transId}`,
             fail_url: 'http://localhost:3030/fail',
             cancel_url: 'http://localhost:3030/cancel',
             ipn_url: 'http://localhost:3030/ipn',
@@ -41,6 +45,8 @@ const savePayment = async (req, res) => {
             ship_postcode: 1000,
             ship_country: 'Bangladesh',
         };
+
+        // console.log('from backend==> ',data)
 
         const sslcz = new SSLCommerzPayment(store_id, store_passwd, is_live)
         sslcz.init(data).then(async (apiResponse) => {

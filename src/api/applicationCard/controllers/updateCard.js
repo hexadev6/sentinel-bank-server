@@ -12,8 +12,11 @@ const updateCard = async (req, res) => {
 
     const foundCard = await applycard.findOne({ _id: req?.params?.id, });
     const userEmail = foundCard.email;
+    const card = foundCard.card
+    console.log(card, foundCard)
+
     if (req.body.status === "issue") {
-      const message = `Your application for a card has been issued!`;
+      const message = `Your application for a ${card} has been issued!`;
       const newNotification = new Notification({
         userEmail,
         message
@@ -22,7 +25,7 @@ const updateCard = async (req, res) => {
       io.emit('newNotification', { message, userEmail });
 
     } else {
-      const message = `Your application for a card has been decliend!`;
+      const message = `Your application for a ${card} has been decliend!`;
       const newNotification = new Notification({
         userEmail,
         message
