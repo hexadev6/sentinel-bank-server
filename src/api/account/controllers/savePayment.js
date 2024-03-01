@@ -19,7 +19,7 @@ const savePayment = async (req, res) => {
             total_amount: paymentInfo.amount,
             currency: 'BDT',
             tran_id: transId, // use unique tran_id for each api call
-            success_url: `http://localhost:5000/deposit/${transId}`,
+            success_url: `https://sentinel-bank-server-six.vercel.app/deposit/${transId}`,
             fail_url: 'http://localhost:3030/fail',
             cancel_url: 'http://localhost:3030/cancel',
             ipn_url: 'http://localhost:3030/ipn',
