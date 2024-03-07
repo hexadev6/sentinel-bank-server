@@ -3,7 +3,7 @@ const Notification = require("../../models/notificationModel");
 
 const updateNotification = async (req, res) => {
     try {
-        const result = await Notification.findByIdAndUpdate(req?.params?.id, req?.body, {
+        const result = await Notification.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
         });
         console.log(result)

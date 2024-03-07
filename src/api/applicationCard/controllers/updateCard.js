@@ -3,14 +3,14 @@ const Notification = require("../../../models/notificationModel")
 const updateCard = async (req, res) => {
   try {
     const result = await applycard.findByIdAndUpdate(
-      req?.params?.id,
-      req?.body,
+      req.params.id,
+      req.body,
       {
         new: true,
       }
     );
 
-    const foundCard = await applycard.findOne({ _id: req?.params?.id, });
+    const foundCard = await applycard.findOne({ _id: req.params.id, });
     const userEmail = foundCard.email;
     const card = foundCard.card
     // console.log(card, foundCard)

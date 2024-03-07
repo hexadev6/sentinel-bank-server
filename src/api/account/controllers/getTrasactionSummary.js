@@ -1,7 +1,7 @@
 const Deposit = require('../../../models/DepositHistoryModel');
 
 const transactionSummary = async (req, res) => {
-    const accNum = parseInt(req.params?.accNum);
+    const accNum = parseInt(req.params.accNum);
     // console.log(accNum);
 
     try {

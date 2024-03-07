@@ -3,7 +3,7 @@ const Loan = require("../../../models/loanModel");
 
 const singleUserLoan = async (req, res) => {
   try {
-    const id = req?.params?.id;
+    const id = req.params.id;
     // console.log(id);
 
     const result = await Loan.findOne({ _id: id });
