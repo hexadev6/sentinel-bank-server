@@ -1,4 +1,4 @@
-const { Schema, model } = require("mongoose");
+const { Schema, model, now } = require("mongoose");
 
 const LoanSchema = new Schema({
   name: {
@@ -97,6 +97,20 @@ const LoanSchema = new Schema({
   interest: {
     type: Number,
     default: 0,
+  },
+  profit: {
+    type: Number,
+    default: 0,
+  },
+  submitDate: [
+    {
+      type: String,
+      default: 0,
+    },
+  ],
+  createAT: {
+    type: Date,
+    default: Date.now,
   },
 });
 
