@@ -1,12 +1,12 @@
 const socketIo = require("socket.io");
 
 const ChatModel = require("../../../models/chatModel");
-const { LOCAL_CLIENT, PROD_CLIENT } = require("../../../config/default.js");
+const { LOCAL_CLIENT, PROD_CLIENT, CLIENT } = require("../../../config/default.js");
 
 const chatServer = (server) => {
   const io = socketIo(server, {
     cors: {
-      origin: [LOCAL_CLIENT],
+      origin: [LOCAL_CLIENT,CLIENT],
       methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
       credentials: true,
       optionSuccessStatus: 200,

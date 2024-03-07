@@ -3,12 +3,12 @@ const Notification = require("../../../models/notificationModel");
 
 const updateAccount = async (req, res) => {
   try {
-    const result = await Account.findByIdAndUpdate(req?.params?.id, req?.body, {
+    const result = await Account.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
 
 
-    const foundAccount = await Account.findOne({ _id: req?.params?.id, });
+    const foundAccount = await Account.findOne({ _id: req.params.id, });
     // console.log(foundAccount)
 
     const userEmail = foundAccount.holderEmail;
