@@ -14,9 +14,7 @@ const Statistics = async (req, res) => {
             totalUser
         }
         res.json(obj)
-        console.log(obj);
-
-
+        // console.log(obj);
 
     }
     catch (error) {

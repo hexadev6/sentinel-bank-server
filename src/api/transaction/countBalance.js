@@ -2,9 +2,9 @@ const Balance = require("../../models/balanceModel");
 
 const countBalance = async (req, res) => {
     try {
-        console.log('12 line==> ',req)
+        // console.log('12 line==> ',req)
         const accNum = req.acc_Num;
-        console.log(accNum) // Assuming the account number is passed as a parameter
+        // console.log(accNum) // Assuming the account number is passed as a parameter
         // const { transactionType, amount } = req.body;
 
         // // Fetch the balance document based on the account number

@@ -10,14 +10,13 @@ const allDeposits = async (req, res) => {
       $set: { paymentStatus: true },
     });
 
-    // res.send({ sucess: true })
-    res.redirect(
-      "https://ornate-kulfi-347059.netlify.app/dashboard/quickBanking"
-    );
-  } catch (error) {
-    console.log(error);
-    res.send(error);
-  }
-};
+        // res.send({ sucess: true })
+        res.redirect('https://sentinel-trust-bank.web.app/dashboard/quickBanking');
+    }
+    catch (error) {
+        console.log(error)
+        res.send(error)
+    }
+}
 
 module.exports = allDeposits;
