@@ -18,7 +18,7 @@ const getCardApply=async(req,res)=>{
       }
 
         res.json(total)
-        console.log(total);
+        // console.log(total);
     }
     catch (error) {
         console.error(error);
