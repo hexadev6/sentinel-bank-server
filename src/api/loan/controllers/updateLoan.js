@@ -3,10 +3,10 @@ const Notification = require("../../../models/notificationModel");
 
 const updateLoan = async (req, res) => {
   try {
-    const { status } = req?.body || {};
+    const { status } = req.body || {};
     if (status === "active") {
       const { loanAmount, loanSubmit, duration, loanDue } = await Loan.findOne({
-        _id: req?.params?.id,
+        _id: req.params.id,
       });
       const interest = loanSubmit === "monthly" ? 10 : 8;
       let profit = (parseInt(loanAmount) * interest) / 100;
@@ -22,26 +22,18 @@ const updateLoan = async (req, res) => {
         loanDue: parseInt(loanAmount) + parseInt(profit) - parseInt(loanDue),
       };
 
-      const result = await Loan.findByIdAndUpdate(req?.params?.id, updateInfo, {
+      const result = await Loan.findByIdAndUpdate(req.params.id, updateInfo, {
         new: true,
       });
-      // const foundLoan = await Loan.findOne({ _id: req?.params?.id });
-      // const userEmail = foundLoan?.email;
-      // const message = `Your application for a loan has been approved!`;
-      // const newNotification = new Notification({
-      //   userEmail,
-      //   message,
-      // });
-      // await newNotification.save();
-      // io.emit("newNotification", { message, userEmail });
+     
 
       return res.status(200).json({ message: "success", data: result });
     } else {
-      const { perLoan, submitDate } = req?.body;
+      const { perLoan, submitDate } = req.body;
       console.log(req.body);
       const { loanAmount, loanSubmit, duration, loanDue, loanCompRang } =
         await Loan.findOne({
-          _id: req?.params?.id,
+          _id: req.params.id,
         });
 
       let loanComplete = parseInt(loanCompRang) + parseInt(perLoan);
@@ -52,19 +44,10 @@ const updateLoan = async (req, res) => {
         loanDue: loanDueinfo,
       };
 
-      const result = await Loan.findByIdAndUpdate(req?.params?.id, updateInfo, {
+      const result = await Loan.findByIdAndUpdate(req.params.id, updateInfo, {
         new: true,
       });
-      // ---------------
-      // const foundLoan = await Loan.findOne({ _id: req?.params?.id });
-      // const userEmail = foundLoan?.email;
-      // const message = `Your application for a loan has been decliend!`;
-      // const newNotification = new Notification({
-      //   userEmail,
-      //   message,
-      // });
-      // await newNotification.save();
-      // io.emit("newNotification", { message, userEmail });
+
       // -------------
       return res.status(200).json({ message: "success", data: result });
     }

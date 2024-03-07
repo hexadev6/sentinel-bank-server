@@ -1,0 +1,50 @@
+0000000000000000000000000000000000000000 0dd067027d9d2d5e25a58fd103d4ca16309c9a69 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707410965 +0600	clone: from https://github.com/hexadev6/sentinel-bank-server.git
+0dd067027d9d2d5e25a58fd103d4ca16309c9a69 77025d9ed6c4bac9c7db6765b68247858acffcb8 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707411041 +0600	checkout: moving from main to payment
+77025d9ed6c4bac9c7db6765b68247858acffcb8 2cad169e66bb409294391356da6c1aee09300f70 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707412148 +0600	pull origin stage: Fast-forward
+2cad169e66bb409294391356da6c1aee09300f70 f26cc6929f0f4e6699f4460b31c873f2a8df6ae5 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707483338 +0600	commit: ssl banking add
+f26cc6929f0f4e6699f4460b31c873f2a8df6ae5 916af40667b2a7019a49f2be1cfb7534e57e5cc5 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707483496 +0600	commit (merge): conflict resolve
+916af40667b2a7019a49f2be1cfb7534e57e5cc5 7a308fb80ea8a7352ebed4fb0016798948554357 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707893124 +0600	pull origin stage: Fast-forward
+7a308fb80ea8a7352ebed4fb0016798948554357 7a308fb80ea8a7352ebed4fb0016798948554357 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707898864 +0600	checkout: moving from payment to review
+7a308fb80ea8a7352ebed4fb0016798948554357 ec97b358c8c2dc7119a0b83c0e2322734adb3306 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1707908284 +0600	commit: review data store
+ec97b358c8c2dc7119a0b83c0e2322734adb3306 995ab9f76f56a6d848d124c748abc1adb7a6702b Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708002837 +0600	commit: notice add
+995ab9f76f56a6d848d124c748abc1adb7a6702b 89b809d130feb71d4f4d3ce5a409cb3db142a069 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708002847 +0600	pull origin stage: Merge made by the 'ort' strategy.
+89b809d130feb71d4f4d3ce5a409cb3db142a069 ee0153aef08d87c08dfcd4e9c60a93ff6c5d7f83 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708011366 +0600	commit: notice get,post,delete,patch
+ee0153aef08d87c08dfcd4e9c60a93ff6c5d7f83 f9ab388531f8b0f67c426d3dc5b1a90b6b1733de Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708070591 +0600	commit: single notice api create
+f9ab388531f8b0f67c426d3dc5b1a90b6b1733de 7ed67f28ab907c40342646392ebfb4742006a19f Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708070611 +0600	pull origin stage: Merge made by the 'ort' strategy.
+7ed67f28ab907c40342646392ebfb4742006a19f 7ed67f28ab907c40342646392ebfb4742006a19f Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708070886 +0600	checkout: moving from review to notice
+7ed67f28ab907c40342646392ebfb4742006a19f 83454a05800e170983817af162f2acb2cf43064e Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708092949 +0600	commit: pull update
+83454a05800e170983817af162f2acb2cf43064e a4eb248a244fb4b2681ae8d62aaaafcf44b2abd5 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708092958 +0600	pull origin stage: Merge made by the 'ort' strategy.
+a4eb248a244fb4b2681ae8d62aaaafcf44b2abd5 83454a05800e170983817af162f2acb2cf43064e Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708094673 +0600	reset: moving to HEAD~1
+83454a05800e170983817af162f2acb2cf43064e 7ed67f28ab907c40342646392ebfb4742006a19f Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708094682 +0600	reset: moving to HEAD~1
+7ed67f28ab907c40342646392ebfb4742006a19f f9ab388531f8b0f67c426d3dc5b1a90b6b1733de Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708094696 +0600	reset: moving to HEAD~1
+f9ab388531f8b0f67c426d3dc5b1a90b6b1733de f9ab388531f8b0f67c426d3dc5b1a90b6b1733de Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708102038 +0600	reset: moving to f9ab388
+f9ab388531f8b0f67c426d3dc5b1a90b6b1733de f9ab388531f8b0f67c426d3dc5b1a90b6b1733de Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708251621 +0600	checkout: moving from notice to chatapp
+f9ab388531f8b0f67c426d3dc5b1a90b6b1733de 751b555eaa01cd7d0a341ea84296538a687cf288 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708269245 +0600	commit: chat app fix
+751b555eaa01cd7d0a341ea84296538a687cf288 2d6c4c898a99efe6ffe3d0324d648c4accd80d76 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708269387 +0600	commit (merge): pull update
+2d6c4c898a99efe6ffe3d0324d648c4accd80d76 8ef975ede4d37a650faec1c02ec4c3bf6b9b6ed6 Zannatul Ferdousi Hema <shanzidadisha1234.com> 1708269804 +0600	commit: chatapp push error
+8ef975ede4d37a650faec1c02ec4c3bf6b9b6ed6 8ef975ede4d37a650faec1c02ec4c3bf6b9b6ed6 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708271942 +0600	checkout: moving from chatapp to newmerge
+8ef975ede4d37a650faec1c02ec4c3bf6b9b6ed6 13d84b4282a7efa9381cd35a92d09233488da031 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708271978 +0600	pull origin stage: Fast-forward
+13d84b4282a7efa9381cd35a92d09233488da031 751b555eaa01cd7d0a341ea84296538a687cf288 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708283496 +0600	reset: moving to 751b555
+751b555eaa01cd7d0a341ea84296538a687cf288 8fbf1202377c832f26a195df3c46f740b0a15e33 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708284120 +0600	commit: error free code till chatapp
+8fbf1202377c832f26a195df3c46f740b0a15e33 8fbf1202377c832f26a195df3c46f740b0a15e33 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708284149 +0600	checkout: moving from newmerge to testDev
+8fbf1202377c832f26a195df3c46f740b0a15e33 f9ab388531f8b0f67c426d3dc5b1a90b6b1733de Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708440944 +0600	checkout: moving from testDev to notice
+f9ab388531f8b0f67c426d3dc5b1a90b6b1733de 8ef975ede4d37a650faec1c02ec4c3bf6b9b6ed6 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708441352 +0600	checkout: moving from notice to chatapp
+8ef975ede4d37a650faec1c02ec4c3bf6b9b6ed6 80a36f95077890e5f827cdc0b0d5efe90452f7c1 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708441541 +0600	pull origin stage: Fast-forward
+80a36f95077890e5f827cdc0b0d5efe90452f7c1 277373d0b1d85597ba0c9558b85f072f1caf0562 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708789559 +0600	commit: error fix
+277373d0b1d85597ba0c9558b85f072f1caf0562 277373d0b1d85597ba0c9558b85f072f1caf0562 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708789881 +0600	reset: moving to HEAD
+277373d0b1d85597ba0c9558b85f072f1caf0562 277373d0b1d85597ba0c9558b85f072f1caf0562 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708789917 +0600	reset: moving to HEAD
+277373d0b1d85597ba0c9558b85f072f1caf0562 19092a6547c00745020afb21381883970d495d44 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708790075 +0600	commit (merge): merging
+19092a6547c00745020afb21381883970d495d44 6ba26ecd77d9344589b1234be53314680737fa94 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708790229 +0600	commit: conflict error fix
+6ba26ecd77d9344589b1234be53314680737fa94 4ae74c21d2aa2d08f327e15ebcb4521d4ee15087 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708790484 +0600	commit: merge after conflict fix
+4ae74c21d2aa2d08f327e15ebcb4521d4ee15087 7dd3c37f6b5da833ec2ba7c30031cd8934a7be77 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708809699 +0600	commit: load route add
+7dd3c37f6b5da833ec2ba7c30031cd8934a7be77 71afa349405b42ea33adb39085836e6146082596 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708809857 +0600	commit (merge): conflict fiix
+71afa349405b42ea33adb39085836e6146082596 71afa349405b42ea33adb39085836e6146082596 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708852718 +0600	checkout: moving from chatapp to notification
+71afa349405b42ea33adb39085836e6146082596 6697c024a587d4eeb9a155baa7c307719a5399d3 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708852975 +0600	pull origin stage: Fast-forward
+6697c024a587d4eeb9a155baa7c307719a5399d3 3104e429776a08aa08f8d7c7cd310e8ba647bd54 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1708862244 +0600	commit: notification added into backend
+3104e429776a08aa08f8d7c7cd310e8ba647bd54 c0022602aa6825a66114ef866ece63ffdb9bf928 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709109716 +0600	pull origin stage: Fast-forward
+c0022602aa6825a66114ef866ece63ffdb9bf928 b2a3831cff195ba47796dedea47decb2185e3dc1 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709185610 +0600	commit: api fix
+b2a3831cff195ba47796dedea47decb2185e3dc1 b2a3831cff195ba47796dedea47decb2185e3dc1 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709286768 +0600	checkout: moving from notification to transaction
+b2a3831cff195ba47796dedea47decb2185e3dc1 51a53aa857c10f3ee072b0484f139e31b7df22c7 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709300603 +0600	commit: error fix
+51a53aa857c10f3ee072b0484f139e31b7df22c7 d4cf1031b55546ed0380787ed453b95ebd346607 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709300782 +0600	commit: api changee
+d4cf1031b55546ed0380787ed453b95ebd346607 d7046e28141ce3bc0e7ee163150aa738053b15c4 Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709791799 +0600	commit: url change
+d7046e28141ce3bc0e7ee163150aa738053b15c4 d7458869c5e46fa22e1bbff94c7a71dce7afdd8a Zannatul Ferdousi Hema <shanzidadisha1234@gmail.com> 1709791868 +0600	commit (merge): url change
